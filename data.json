@@ -1,0 +1,94 @@
+{
+  "church": {
+    "name": "Royalties Youth Church",
+    "denomination": "Christ Embassy",
+    "branches": 4,
+    "fellowships_per_branch": 4,
+    "leaders_per_fellowship": 10,
+    "members_per_leader": 5
+  },
+
+  "announcements": [
+    {
+      "title": "Sunday Service",
+      "date": "2025-09-01",
+      "details": "Join us this Sunday at 9 AM for a powerful service!"
+    },
+    {
+      "title": "Youth Prayer Meeting",
+      "date": "2025-09-05",
+      "details": "All-night prayer session at 10 PM."
+    }
+  ],
+
+  "programs": [
+    {
+      "id": "crusade2025",
+      "name": "Annual Crusade",
+      "year": 2025,
+      "description": "A city-wide crusade with thousands in attendance.",
+      "images": ["images/crusade1.jpg","images/crusade2.jpg","images/crusade3.jpg"],
+      "videos": ["videos/crusade1.mp4"]
+    },
+    {
+      "id": "youthcamp2025",
+      "name": "Youth Camp",
+      "year": 2025,
+      "description": "A weekend retreat for youth empowerment and growth.",
+      "images": ["images/camp1.jpg","images/camp2.jpg"],
+      "videos": ["videos/camp1.mp4"]
+    }
+  ],
+
+  "pastors": [
+    {
+      "name": "Pastor John Doe",
+      "image": "images/pastor1.jpg",
+      "description": "Lead pastor of RYC with over 15 years of ministry experience."
+    },
+    {
+      "name": "Pastor Jane Smith",
+      "image": "images/pastor2.jpg",
+      "description": "Co-pastor focusing on youth mentorship and counseling."
+    }
+  ],
+
+  "fellowships": [
+    {
+      "name": "Fellowship A",
+      "image": "images/fellowship1.jpg",
+      "assistant": "Assistant: Michael Johnson"
+    },
+    {
+      "name": "Fellowship B",
+      "image": "images/fellowship2.jpg",
+      "assistant": "Assistant: Sarah Lee"
+    }
+  ],
+
+  "leaders": [
+    {
+      "leader": "Leader 1",
+      "image": "images/leader1.jpg",
+      "role": "Branch Leader"
+    },
+    {
+      "leader": "Leader 2",
+      "image": "images/leader2.jpg",
+      "role": "Fellowship Leader"
+    }
+  ],
+
+  "awards": {
+    "best_leader": {
+      "leader": "Leader 1",
+      "image": "images/best_leader.jpg",
+      "description": "Best Leader in Partnership & Membership"
+    },
+    "best_fellowship": {
+      "name": "Fellowship A",
+      "image": "images/best_fellowship.jpg",
+      "description": "Best Fellowship in Partnership & Membership"
+    }
+  }
+}
