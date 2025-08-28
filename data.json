@@ -26,17 +26,17 @@
       "id": "Exceed2025",
       "name": "Exceeding Glory Camp",
       "year": 2024,
-      "description": "A weekend retreat for youth empowerment and growth.",
-      "images": ["images/exc1jpeg","images/exc2jpeg","images/exc3jpeg","images/exc4jpeg"],
-      "videos": ["videos/crusade1.mp4"]
+      "description": "A weekend  camp for spiritual growth and fellowship.",
+      "images": ["images/exc1jpeg","images/exc2jpeg","images/exc3jpeg","images/exc4jpeg","images/exc5jpeg","images/exc6jpeg"],
+      "videos": ["videos/excv.mp4"]
     },
     {
-      "id": "youthcamp2025",
-      "name": "Youth Camp",
+      "id": "encounter2025",
+      "name": "Retreat",
       "year": 2025,
       "description": "A weekend retreat for youth empowerment and growth.",
-      "images": ["images/camp1.jpg","images/camp2.jpg"],
-      "videos": ["videos/camp1.mp4"]
+      "images": ["images/enc1.jpeg","images/enc1.jpeg"],
+      "videos": ["videos/encv.mp4"]
     }
   ],
 
