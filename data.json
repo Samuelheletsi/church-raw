@@ -23,11 +23,11 @@
 
   "programs": [
     {
-      "id": "crusade2025",
-      "name": "Annual Crusade",
-      "year": 2025,
-      "description": "A city-wide crusade with thousands in attendance.",
-      "images": ["images/crusade1.jpg","images/crusade2.jpg","images/crusade3.jpg"],
+      "id": "Exceed2025",
+      "name": "Exceeding Glory Camp",
+      "year": 2024,
+      "description": "A weekend retreat for youth empowerment and growth.",
+      "images": ["images/exc1jpeg","images/exc2jpeg","images/exc3jpeg","images/exc4jpeg"],
       "videos": ["videos/crusade1.mp4"]
     },
     {
