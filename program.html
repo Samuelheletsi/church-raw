@@ -3,59 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program Details | Royalties Youth Church</title>
+  <title>Program Details</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-  <span class="sun">☀️</span>
-  <span class="moon">🌙</span>
-</button>
-
+  <!-- Header -->
   <header>
-    <h1 id="program-title"></h1>
-    <button onclick="window.location.href='index.html'" class="back-btn">⬅ Back</button>
+    <nav>
+      <a href="index.html" class="logo">Church Website</a>
+      <ul>
+        <li><a href="index.html#programs">Programs</a></li>
+        <li><a href="index.html#announcements">Announcements</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="program-detail">
+  <!-- Program Details -->
+  <section id="program-content">
+    <h1 id="program-title">Loading...</h1>
     <p id="program-description"></p>
-    <div id="program-gallery" class="gallery"></div>
-    <div id="program-videos" class="videos"></div>
-  </section>
-  <section id="programs" class="programs">
-  <h2>Our Programs & Events</h2>
-  
-  <div class="carousel-container">
-    <div class="carousel-track">
-      
-      <!-- Program Card -->
-      <div class="program-card">
-        <img src="images/crusade.jpg" alt="Crusade">
-        <h3>Annual Crusade</h3>
-        <p>A powerful gathering of believers with miracles, healing & salvation.</p>
-      </div>
 
-      <div class="program-card">
-        <img src="images/camp.jpg" alt="Camp">
-        <h3>Youth Camp</h3>
-        <p>Equipping young leaders through prayer, teaching, and fellowship.</p>
-      </div>
+    <!-- Gallery -->
+    <h2>Photo Gallery</h2>
+    <div id="program-gallery" class="gallery-grid"></div>
 
-      <div class="program-card">
-        <img src="images/outreach.jpg" alt="Outreach">
-        <h3>Outreach</h3>
-        <p>Taking the gospel of Christ to the streets & communities.</p>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-img" id="lightbox-img" />
+      <div class="lightbox-controls">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
       </div>
-
-      <div class="program-card">
-        <img src="images/dinner.jpg" alt="Dinner Award">
-        <h3>Dinner & Awards</h3>
-        <p>A night of thanksgiving, awards, and celebration of God’s goodness.</p>
-      </div>
-
     </div>
-  </div>
-</section>
+
+    <!-- Videos -->
+    <h2>Videos</h2>
+    <div id="program-videos" class="video-section"></div>
+
+    <button onclick="history.back()" class="back-btn">← Back</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Church Website. All Rights Reserved.</p>
+  </footer>
 
   <script src="program.js"></script>
 </body>
