@@ -8,23 +8,11 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">Royalties Youth Church</a>
-    <ul class="nav-links">
-      <li><a href="#programs">Programs</a></li>
-      <li><a href="#announcements">Announcements</a></li>
-      <li><a href="#pastors">Pastors</a></li>
-      <li><a href="#leaders">Leaders</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Dark Mode Toggle -->
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-    <span class="sun">☀️</span>
-    <span class="moon">🌙</span>
-  </button>
+  <!-- Theme & List/Grid Toggle -->
+  <div class="top-controls">
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙 / ☀️</button>
+    <button id="list-toggle" aria-label="Toggle list/grid view">List / Grid</button>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -47,108 +35,94 @@
   <!-- Programs -->
   <section id="programs">
     <h2>Our Programs & Events</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/exc1.jpeg" alt="Crusade Day 1" loading="lazy">
-        <h3>Annual Crusade</h3>
-        <p>Join thousands in our yearly crusade.</p>
-      </div>
-      <div class="card">
-        <img src="images/enc1.jpeg" alt="Prayer Meeting" loading="lazy">
-        <h3>Youth Prayer Meeting</h3>
-        <p>A night of worship and intercession.</p>
-      </div>
-      <div class="card">
-        <img src="images/exc1.jpeg" alt="Sunday Service" loading="lazy">
-        <h3>Sunday Service</h3>
-        <p>Powerful Word and fellowship every Sunday.</p>
-      </div>
-    </div>
+    <div id="programs-container" class="programs-container"></div>
   </section>
 
-  <!-- Pastors -->
+  <!-- Team Sections -->
   <section id="pastors" class="team-section">
     <h2>Our Pastors</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/pastor1.jpg" alt="Pastor John Doe" loading="lazy">
-        <h3>Pastor John Doe</h3>
-        <p>Lead Pastor</p>
-      </div>
-      <div class="card">
-        <img src="images/pastor2.jpg" alt="Pastor Jane Smith" loading="lazy">
-        <h3>Pastor Jane Smith</h3>
-        <p>Associate Pastor</p>
-      </div>
-    </div>
+    <div class="team-container"></div>
   </section>
 
-  <!-- Leaders -->
+  <section id="fellowships" class="team-section">
+    <h2>Fellowships & Assistants</h2>
+    <div class="team-container"></div>
+  </section>
+
   <section id="leaders" class="team-section">
     <h2>Our Leaders</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/leader1.jpg" alt="Leader Samuel" loading="lazy">
-        <h3>Samuel</h3>
-        <p>Youth Leader</p>
-      </div>
-      <div class="card">
-        <img src="images/leader2.jpg" alt="Leader Sarah" loading="lazy">
-        <h3>Sarah</h3>
-        <p>Music Leader</p>
-      </div>
-    </div>
+    <div class="team-container"></div>
   </section>
 
-  <!-- Awards -->
   <section id="awards" class="team-section">
     <h2>Awards</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="images/best-leader.jpg" alt="Best Leader Award" loading="lazy">
-        <h3>Best Leader 2025</h3>
-        <p>Recognizing excellence in leadership.</p>
-      </div>
-      <div class="card">
-        <img src="images/best-fellowship.jpg" alt="Best Fellowship Award" loading="lazy">
-        <h3>Best Fellowship 2025</h3>
-        <p>Celebrating fellowship growth and impact.</p>
-      </div>
-    </div>
+    <div class="team-container"></div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-container">
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+  <!-- ==============================
+     Contact Section
+============================== -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
 
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=CHURCH1_LOCATION" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <iframe src="https://www.google.com/maps/embed?pb=CHURCH2_LOCATION" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <h3>Our Locations</h3>
+      <div class="map-container">
+        <!-- North Legon Church -->
+        <div class="map-card">
+          <h4>RYC North Legon</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.123456789!2d-0.181234!3d5.617890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd1234!2sRoyalties+Youth+Church+North+Legon!5e0!3m2!1sen!2sgh!4v1690000000000"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+          <p>📍 North Legon - RYC Church</p>
+        </div>
+
+        <!-- Spintex Church -->
+        <div class="map-card">
+          <h4>RYC Spintex</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.987654321!2d-0.123456!3d5.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd5678!2sRoyalties+Youth+Church+Spintex!5e0!3m2!1sen!2sgh!4v1690000000001"
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+          <p>📍 Avery Hill, Spintex Road - RYC The Glorious Church</p>
+        </div>
       </div>
     </div>
-    <div class="socials">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | 
-      <a href="#">YouTube</a> | <a href="#">WhatsApp</a>
-    </div>
-  </section>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="socials">
+    <a href="#" target="_blank" rel="noopener">Facebook</a> | 
+    <a href="#" target="_blank" rel="noopener">Instagram</a> | 
+    <a href="#" target="_blank" rel="noopener">YouTube</a> | 
+    <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</section>
+
 
   <script src="script.js"></script>
 </body>
