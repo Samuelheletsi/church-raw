@@ -42,35 +42,37 @@
 
   "pastors": [
     {
-      "name": "Pastor John Doe",
+      "name": "Pastor David Osae",
       "image": "images/pastor1.jpg",
-      "description": "Lead pastor of RYC with over 15 years of ministry experience."
+      "description": "Pastor of CE-RYC The Glorious Church and overseer of all branches."
     },
     {
-      "name": "Pastor Jane Smith",
+      "name": "Pastor Wisdom Klatsu",
       "image": "images/pastor2.jpg",
-      "description": "Co-pastor focusing on youth mentorship and counseling."
+      "description": "Pastor of CE-RYC The Perfect Church and overseer of all branches.."
     }
   ],
 
   "fellowships": [
     {
-      "name": "Fellowship A",
+      "name": "Dunamis Fellowship ",
+      "leader_name": "Sir Daniel",
       "image": "images/fellowship1.jpg",
-      "assistant": "Assistant: Michael Johnson"
+      "assistant": "Assistant: Bro Raymond & Sister Gifty"
     },
     {
-      "name": "Fellowship B",
+      "name": "Achievers Fellowship ",
+      "leader_name": "Bro PY",
       "image": "images/fellowship2.jpg",
-      "assistant": "Assistant: Sarah Lee"
+      "assistant": "Assistant: Bro John, Sis Hilary & Bro Dennis"
     }
   ],
 
   "leaders": [
     {
-      "leader": "Leader 1",
+      "leader": "Bro Gabriel",
       "image": "images/leader1.jpg",
-      "role": "Branch Leader"
+      "role": " Cell Leader in the Glorious Church"
     },
     {
       "leader": "Leader 2",
