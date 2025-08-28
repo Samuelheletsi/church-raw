@@ -406,4 +406,77 @@ body.dark .bg-video {
   min-height: 100vh;
   padding: 20px;
 }
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.6); /* transparent background for video */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(6px); /* glass effect */
+}
+
+nav .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffcc00; /* gold accent */
+  transition: color 0.3s ease;
+}
+
+nav .logo:hover {
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
 

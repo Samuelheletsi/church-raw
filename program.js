@@ -5,6 +5,18 @@ let images = [];
 const urlParams = new URLSearchParams(window.location.search);
 const programId = urlParams.get("id");
 
+
+// Navbar mobile toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("nav ul");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
+
+
 // Fetch program data
 fetch("data.json")
   .then(res => res.json())
