@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royalties Youth Church</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <link rel="icon" href="images/hryc.png" type="image/x-icon">
 </head>
 <body>
 
@@ -105,7 +107,24 @@
       <a href="#" target="_blank" rel="noopener">YouTube</a> | 
       <a href="#" target="_blank" rel="noopener">WhatsApp</a>
     </div>
+    <div id="qrcode"></div>
+    <p>&copy; 2024 Royalties Youth Church. All rights reserved.</p>
   </section>
+
+  <script>
+      // Replace with your website URL
+const websiteURL = "https://ce-ryc-web.netlify.app/"; 
+
+const qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: websiteURL,
+    width: 180,
+    height: 180,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+
+  </script>
 
   <script src="script.js"></script>
 </body>
