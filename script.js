@@ -102,7 +102,7 @@ function populateTeamSections(data){
     {id:"pastors", items:data.pastors, fields:["description"]},
     {id:"fellowships", items:data.fellowships, fields:["leader_name","assistant"]},
     {id:"leaders", items:data.leaders, fields:["role"]},
-    {id:"awards", items:[data.awards.best_leader, data.awards.best_fellowship], fields:["description"]}
+    {id:"awards", items:[...data.awards.best_leaders, ...data.awards.best_fellowships], fields:["description"]}
   ];
 
   sections.forEach(s=>{
