@@ -55,13 +55,13 @@
 
   "fellowships": [
     {
-      "name": "Dunamis Fellowship ",
+      "name": "Dunamis Fellowship",
       "leader_name": "Sir Daniel",
       "image": "images/fellowship1.jpg",
       "assistant": "Assistant: Bro Raymond & Sister Gifty"
     },
     {
-      "name": "Achievers Fellowship ",
+      "name": "Achievers Fellowship",
       "leader_name": "Bro PY",
       "image": "images/fellowship2.jpg",
       "assistant": "Assistant: Bro John, Sis Hilary & Bro Dennis"
