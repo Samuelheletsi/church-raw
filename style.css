@@ -46,7 +46,9 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Top Controls */
+/* ==============================
+   Top Controls
+============================== */
 .top-controls {
   display: flex;
   justify-content: flex-end;
@@ -70,25 +72,31 @@ h2 {
 }
 
 /* ==============================
-   Hero Section
+   Hero Section (Mobile Optimized)
 ============================== */
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  color: #fff;
+  padding: 0 1rem;
+  background: #000;
 }
 
 .bg-video {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.6);
+  pointer-events: none;
   transition: filter 0.3s;
 }
 
@@ -96,18 +104,37 @@ body.dark .bg-video {
   filter: brightness(0.8);
 }
 
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
 .hero-logo {
   width: 150px;
-  margin-bottom: 20px;
+  max-width: 30%;
+  margin-bottom: 1rem;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero-logo {
+    width: 120px;
+  }
 }
 
 /* ==============================
@@ -290,26 +317,8 @@ body.dark .bg-video {
 }
 
 /* ==============================
-   Responsive
+   Gallery & Lightbox
 ============================== */
-@media (max-width: 768px){
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .team-container {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  }
-
-  .programs-container {
-    grid-template-columns: 1fr;
-  }
-}
-/* Gallery Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -330,7 +339,6 @@ body.dark .bg-video {
   transform: scale(1.05);
 }
 
-/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -380,50 +388,27 @@ body.dark .bg-video {
 .lightbox-controls .next:hover {
   color: #ccc;
 }
-/* Background Video */
-.video-background {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; /* Behind everything */
-}
 
-.video-background video {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-/* Overlay Content */
-.overlay {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-  background: rgba(0,0,0,0.4); /* dark overlay for readability */
-  min-height: 100vh;
-  padding: 20px;
-}
-/* Navbar */
+/* ==============================
+   Navbar
+============================== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(0,0,0,0.6); /* transparent background for video */
+  background: rgba(0,0,0,0.6);
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(6px); /* glass effect */
+  backdrop-filter: blur(6px);
 }
 
 nav .logo {
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
-  color: #ffcc00; /* gold accent */
+  color: #ffcc00;
   transition: color 0.3s ease;
 }
 
@@ -451,7 +436,13 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* Responsive Menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+}
+
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -470,13 +461,13 @@ nav ul li a:hover {
 
   .menu-toggle {
     display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: white;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .programs-container {
+    grid-template-columns: 1fr;
   }
 }
-
-.menu-toggle {
-  display: none;
-}
-

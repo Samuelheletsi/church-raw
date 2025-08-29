@@ -14,10 +14,12 @@
     <button id="list-toggle" aria-label="Toggle list/grid view">List / Grid</button>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Mobile-Optimized) -->
   <section class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="videos/camp-vid.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline class="bg-video" poster="images/hero-fallback.jpg">
+      <source src="videos/camp-vid-mobile.mp4" type="video/mp4">
+      <source src="videos/camp-vid-mobile.webm" type="video/webm">
+      Your browser does not support the video tag.
     </video>
     <div class="hero-content">
       <img src="images/hryc.png" alt="RYC Logo" class="hero-logo">
@@ -59,70 +61,51 @@
     <div class="team-container"></div>
   </section>
 
-  <!-- Contact -->
-  <!-- ==============================
-     Contact Section
-============================== -->
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-container">
-
-    <!-- Contact Form -->
-    <form class="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn-submit">Send Message</button>
-    </form>
-
-    <!-- Map Section -->
-    <div class="map-section">
-      <h3>Our Locations</h3>
-      <div class="map-container">
-        <!-- North Legon Church -->
-        <div class="map-card">
-          <h4>RYC North Legon</h4>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.123456789!2d-0.181234!3d5.617890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd1234!2sRoyalties+Youth+Church+North+Legon!5e0!3m2!1sen!2sgh!4v1690000000000"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-          <p>📍 North Legon - RYC Church</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
         </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
 
-        <!-- Spintex Church -->
-        <div class="map-card">
-          <h4>RYC Spintex</h4>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.987654321!2d-0.123456!3d5.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd5678!2sRoyalties+Youth+Church+Spintex!5e0!3m2!1sen!2sgh!4v1690000000001"
-            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
-          <p>📍 Avery Hill, Spintex Road - RYC The Glorious Church</p>
+      <div class="map-section">
+        <h3>Our Locations</h3>
+        <div class="map-container">
+          <div class="map-card">
+            <h4>RYC North Legon</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.123456789!2d-0.181234!3d5.617890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd1234!2sRoyalties+Youth+Church+North+Legon!5e0!3m2!1sen!2sgh!4v1690000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>📍 North Legon - RYC Church</p>
+          </div>
+
+          <div class="map-card">
+            <h4>RYC Spintex</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.987654321!2d-0.123456!3d5.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020abcd5678!2sRoyalties+Youth+Church+Spintex!5e0!3m2!1sen!2sgh!4v1690000000001" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <p>📍 Avery Hill, Spintex Road - RYC The Glorious Church</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Social Media Links -->
-  <div class="socials">
-    <a href="#" target="_blank" rel="noopener">Facebook</a> | 
-    <a href="#" target="_blank" rel="noopener">Instagram</a> | 
-    <a href="#" target="_blank" rel="noopener">YouTube</a> | 
-    <a href="#" target="_blank" rel="noopener">WhatsApp</a>
-  </div>
-</section>
-
+    <div class="socials">
+      <a href="#" target="_blank" rel="noopener">Facebook</a> | 
+      <a href="#" target="_blank" rel="noopener">Instagram</a> | 
+      <a href="#" target="_blank" rel="noopener">YouTube</a> | 
+      <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
