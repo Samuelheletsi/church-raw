@@ -43,12 +43,12 @@
   "pastors": [
     {
       "name": "Pastor David Osae",
-      "image": "images/pastor1.jpg",
+      "image": "images/psd.jpeg",
       "description": "Pastor of CE-RYC The Glorious Church and overseer of all branches."
     },
     {
       "name": "Pastor Wisdom Klatsu",
-      "image": "images/pastor2.jpg",
+      "image": "images/psw.jpeg",
       "description": "Pastor of CE-RYC The Perfect Church and overseer of all branches."
     }
   ],
@@ -71,12 +71,12 @@
   "leaders": [
     {
       "leader": "Bro Gabriel",
-      "image": "images/leader1.jpg",
+      "image": "images/leader_1.jpg",
       "role": " Cell Leader in the Glorious Church"
     },
     {
-      "leader": "Leader 2",
-      "image": "images/leader2.jpg",
+      "leader": "Bro Stephen",
+      "image": "images/leader_2.jpg",
       "role": "Fellowship Leader"
     }
   ],
@@ -84,24 +84,24 @@
   "awards": {
     "best_leaders": [
       {
-        "leader": "Leader 1",
+        "leader": "Sir Dav",
         "image": "images/awd.jpeg",
         "description": "Best Leader in Partnership"
       },
       {
-        "leader": "Leader 2",
+        "leader": "Bro Benjamin",
         "image": "images/awd1.jpeg",
         "description": "Best Cell Leader"
       }
     ],
     "best_fellowships": [
       {
-        "name": "Fellowship A",
-        "image": "images/best_fellowship.jpg",
-        "description": "Best Fellowship in Partnership"
+        "name": "Dunamis Fellowship",
+        "image": "images/dunamis.jpeg",
+        "description": "Best Fellowship in Membership"
       },
       {
-        "name": "Fellowship B",
+        "name": "Grace Haven Fellowship",
         "image": "images/best1_fellowship.jpg",
         "description": "Best Fellowship in Partnership & Membership"
       }
