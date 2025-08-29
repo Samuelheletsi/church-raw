@@ -82,15 +82,29 @@
   ],
 
   "awards": {
-    "best_leader": {
-      "leader": "Leader 1",
-      "image": "images/best_leader.jpg",
-      "description": "Best Leader in Partnership & Membership"
-    },
-    "best_fellowship": {
-      "name": "Fellowship A",
-      "image": "images/best_fellowship.jpg",
-      "description": "Best Fellowship in Partnership & Membership"
-    }
+    "best_leaders": [
+      {
+        "leader": "Leader 1",
+        "image": "images/awd.jpeg",
+        "description": "Best Leader in Partnership"
+      },
+      {
+        "leader": "Leader 2",
+        "image": "images/awd1.jpeg",
+        "description": "Best Cell Leader"
+      }
+    ],
+    "best_fellowships": [
+      {
+        "name": "Fellowship A",
+        "image": "images/best_fellowship.jpg",
+        "description": "Best Fellowship in Partnership"
+      },
+      {
+        "name": "Fellowship B",
+        "image": "images/best1_fellowship.jpg",
+        "description": "Best Fellowship in Partnership & Membership"
+      }
+    ]
   }
 }
