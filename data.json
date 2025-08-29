@@ -71,12 +71,12 @@
   "leaders": [
     {
       "leader": "Bro Gabriel",
-      "image": "images/leader_1.jpg",
+      "image": "images/leader1.jpg",
       "role": " Cell Leader in the Glorious Church"
     },
     {
       "leader": "Bro Stephen",
-      "image": "images/leader_2.jpg",
+      "image": "images/leader2.jpg",
       "role": "Fellowship Leader"
     }
   ],
