@@ -53,20 +53,23 @@
     }
   ],
 
-  "fellowships": [
-    {
-      "name": "Dunamis Fellowship",
-      "leader_name": "Sir Daniel",
-      "image": "images/dunamis.jpeg",
-      "assistant": "Assistant: Bro Raymond & Sister Gifty"
-    },
-    {
-      "name": "Achievers Fellowship",
-      "leader_name": "Bro PY",
-      "image": "images/fellowship2.jpg",
-      "assistant": "Assistant: Bro John, Sis Hilary & Bro Dennis"
-    }
-  ],
+"fellowships": [
+  {
+    "id": "dunamis",
+    "name": "Dunamis Fellowship",
+    "leader_name": "Sir Daniel",
+    "image": "images/dunamis.jpeg",
+    "assistant": "Assistant: Bro Raymond & Sister Gifty"
+  },
+  {
+    "id": "achievers",
+    "name": "Achievers Fellowship",
+    "leader_name": "Bro PY",
+    "image": "images/fellowship2.jpg",
+    "assistant": "Assistant: Bro John, Sis Hilary & Bro Dennis"
+  }
+]
+,
 
   "leaders": [
     {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fellowship Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="fellowship-container" class="detail-container"></div>
+
+  <script>
+    async function loadFellowship() {
+      const params = new URLSearchParams(window.location.search);
+      const fellowshipId = params.get("id");
+
+      const response = await fetch("data.json");
+      const data = await response.json();
+
+      const fellowship = data.fellowships.find(f => f.id === fellowshipId);
+
+      if (!fellowship) {
+        document.getElementById("fellowship-container").innerHTML = "<p>Fellowship not found.</p>";
+        return;
+      }
+
+      document.getElementById("fellowship-container").innerHTML = `
+        <div class="detail-card">
+          <img src="${fellowship.image}" alt="${fellowship.name}">
+          <h2>${fellowship.name}</h2>
+          <p><strong>Leader:</strong> ${fellowship.leader_name}</p>
+          <p><strong>Assistants:</strong> ${fellowship.assistant}</p>
+          <div class="extra-info">
+            <h3>About ${fellowship.name}</h3>
+            <p>This fellowship is dedicated to raising leaders and empowering members through teachings, prayers, and activities.</p>
+          </div>
+        </div>
+        <a href="index.html" class="back-btn">⬅ Back</a>
+      `;
+    }
+
+    loadFellowship();
+  </script>
+</body>
+</html>

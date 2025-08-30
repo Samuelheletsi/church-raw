@@ -99,28 +99,61 @@ function loadPrograms(programs){
 // Populate Team Sections
 // ----------------------------
 function populateTeamSections(data){
-  const sections = [
-    {id:"pastors", items:data.pastors, fields:["description"]},
-    {id:"fellowships", items:data.fellowships, fields:["leader_name","assistant"]},
-    {id:"leaders", items:data.leaders, fields:["role"]},
-    {id:"awards", items:[...data.awards.best_leaders, ...data.awards.best_fellowships], fields:["description"]}
-  ];
+  // Pastors
+  const pastorContainer = document.querySelector("#pastors-container");
+  data.pastors.forEach(p=>{
+    const card = document.createElement("div");
+    card.className = "team-card";
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.description}</p>
+    `;
+    card.onclick = ()=> window.location.href=`pastors.html?id=${encodeURIComponent(p.name)}`;
+    pastorContainer.appendChild(card);
+  });
 
-  sections.forEach(s=>{
-    const container = document.querySelector(`#${s.id} .team-container`);
-    if(!container) return;
-    s.items.forEach(item=>{
-      const card = document.createElement("div");
-      card.className = "team-card";
-      card.innerHTML = `
-        <img ${item.image ? `src="${item.image}"` : ""} alt="${item.name||item.leader}">
-        <h3>${item.name||item.leader}</h3>
-        ${s.fields.map(f=>`<p>${item[f]}</p>`).join('')}
-      `;
-      container.appendChild(card);
-    });
+  // Fellowships
+  const fellowshipContainer = document.querySelector("#fellowships-container");
+  data.fellowships.forEach(f=>{
+    const card = document.createElement("div");
+    card.className = "team-card";
+    card.innerHTML = `
+      <img src="${f.image}" alt="${f.name}">
+      <h3>${f.name}</h3>
+      <p>Leader: ${f.leader_name}</p>
+    `;
+    card.onclick = ()=> window.location.href=`fellowship.html?id=${encodeURIComponent(f.name)}`;
+    fellowshipContainer.appendChild(card);
+  });
+
+  // Leaders
+  const leaderContainer = document.querySelector("#leaders .team-container");
+  data.leaders.forEach(l=>{
+    const card = document.createElement("div");
+    card.className = "team-card";
+    card.innerHTML = `
+      <img src="${l.image}" alt="${l.leader}">
+      <h3>${l.leader}</h3>
+      <p>${l.role}</p>
+    `;
+    leaderContainer.appendChild(card);
+  });
+
+  // Awards
+  const awardsContainer = document.querySelector("#awards .team-container");
+  [...data.awards.best_leaders, ...data.awards.best_fellowships].forEach(a=>{
+    const card = document.createElement("div");
+    card.className = "team-card";
+    card.innerHTML = `
+      <img src="${a.image}" alt="${a.name || a.leader}">
+      <h3>${a.name || a.leader}</h3>
+      <p>${a.description}</p>
+    `;
+    awardsContainer.appendChild(card);
   });
 }
+
 
 // ----------------------------
 // Lazy Load Images
@@ -150,11 +183,40 @@ function lazyLoadImages(){
 // ----------------------------
 // Mobile Video Play Trigger
 // ----------------------------
-document.addEventListener('DOMContentLoaded', ()=>{
-  const video = document.querySelector('.bg-video');
-  if(video){
-    video.play().catch(err=>{
-      console.log('Background video play blocked on mobile.', err);
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("bgVideo");
+  if (video) {
+    video.play().catch(err => {
+      console.log("Autoplay blocked, showing fallback image.", err);
+      video.style.display = "none";
+      document.body.style.backgroundImage = "url('assets/bg-fallback.jpg')";
+      document.body.style.backgroundSize = "cover";
     });
   }
 });
+
+function goToPage(type, id) {
+  window.location.href = `${type}.html?id=${encodeURIComponent(id)}`;
+}
+// ----------------------------
+// Navbar Mobile Toggle
+// ----------------------------
+const menuToggle = document.querySelector(".menu-toggle");
+const navUl = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navUl.classList.toggle("active");
+});
+// ----------------------------
+// Smooth Scroll for Navbar Links
+// ----------------------------
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if(target){
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pastor Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="pastor-container" class="detail-container"></div>
+
+  <script>
+    async function loadPastor() {
+      const params = new URLSearchParams(window.location.search);
+      const pastorId = params.get("id");
+
+      const response = await fetch("data.json");
+      const data = await response.json();
+
+      const pastor = data.pastors.find(p => p.name === pastorId);
+
+      if (!pastor) {
+        document.getElementById("pastor-container").innerHTML = "<p>Pastor not found.</p>";
+        return;
+      }
+
+      document.getElementById("pastor-container").innerHTML = `
+        <div class="detail-card">
+          <img src="${pastor.image}" alt="${pastor.name}">
+          <h2>${pastor.name}</h2>
+          <p>${pastor.description}</p>
+          <div class="extra-info">
+            <h3>About ${pastor.name}</h3>
+            <p>${pastor.name} is a dedicated minister of the gospel, known for teaching and mentoring young people in Christ.</p>
+          </div>
+        </div>
+        <a href="index.html" class="back-btn">⬅ Back</a>
+      `;
+    }
+
+    loadPastor();
+  </script>
+</body>
+</html>

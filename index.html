@@ -16,19 +16,49 @@
     <button id="list-toggle" aria-label="Toggle list/grid view">List / Grid</button>
   </div>
 
+  <nav>
+  <a href="index.html" class="logo">Royalties Youth Church</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#fellowships">Fellowship</a></li>
+    <li><a href="#pastors">Pastors</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+
+  </ul>
+  <div class="menu-toggle">&#9776;</div>
+</nav>
+
+
   <!-- Hero Section (Mobile-Optimized) -->
   <section class="hero">
-    <video autoplay muted loop playsinline class="bg-video" poster="images/hero-fallback.jpg">
-      <source src="videos/camp-vid.mp4" type="video/mp4">
-      <!-- <source src="videos/camp-vid.webm" type="video/webm"> -->
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content">
-      <img src="images/hryc.png" alt="RYC Logo" class="hero-logo">
-      <h1>Welcome to Royalties Youth Church</h1>
-      <p>A Christ Embassy Church</p>
-    </div>
-  </section>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="videos/camp-vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Fallback background image (optional, only on mobile) -->
+  <div class="bg-fallback"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <img src="images/hryc.png" alt="Church Logo" class="hero-logo">
+    <h1>Welcome to Royalties Youth Church</h1>
+    <p>Raising leaders, transforming lives.</p>
+  </div>
+</section>
+  <!-- About Section -->
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <div class="about-content">
+    <p>Royalties Youth Church (RYC) is committed to raising leaders and transforming lives through spiritual growth, fellowship, and community service. Our programs focus on youth empowerment, faith development, and community outreach.</p>
+    <p>We aim to create a vibrant and nurturing environment where young people can thrive, discover their potential, and contribute positively to society.</p>
+  </div>
+</section>
+
 
   <!-- Announcements -->
   <section id="announcements">
@@ -43,15 +73,16 @@
   </section>
 
   <!-- Team Sections -->
-  <section id="pastors" class="team-section">
-    <h2>Our Pastors</h2>
-    <div class="team-container"></div>
-  </section>
+<section id="pastors" class="team-section">
+  <h2>Our Pastors</h2>
+  <div class="team-container" id="pastors-container"></div>
+</section>
 
-  <section id="fellowships" class="team-section">
-    <h2>Fellowships & Assistants</h2>
-    <div class="team-container"></div>
-  </section>
+<section id="fellowships" class="team-section">
+  <h2>Fellowships & Assistants</h2>
+  <div class="team-container" id="fellowships-container"></div>
+</section>
+
 
   <section id="leaders" class="team-section">
     <h2>Our Leaders</h2>
