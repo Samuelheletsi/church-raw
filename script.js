@@ -244,13 +244,14 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 });
 
 // Animate elements on scroll
-const scrollElements = document.querySelectorAll('.animate-on-scroll');
+ const scrollElements = document.querySelectorAll('.animate-on-scroll');
 
-const scrollObserver = new IntersectionObserver((entries, observer) => {
+const scrollObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
-      entry.target.classList.add('active'); // Add class to trigger animation
-      observer.unobserve(entry.target); // Stop observing after animation
+      entry.target.classList.add('active'); // Add animation
+    } else {
+      entry.target.classList.remove('active'); // Remove animation when out of view
     }
   });
 }, {
@@ -258,3 +259,4 @@ const scrollObserver = new IntersectionObserver((entries, observer) => {
 });
 
 scrollElements.forEach(el => scrollObserver.observe(el));
+

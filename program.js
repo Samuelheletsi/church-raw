@@ -89,3 +89,19 @@ document.querySelector(".prev").addEventListener("click", showPrev);
 document.getElementById("lightbox").addEventListener("click", (e) => {
   if (e.target === document.getElementById("lightbox")) closeLightbox();
 });
+
+// Animate elements on scroll
+const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+const scrollObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('active'); // Add class to trigger animation
+      observer.unobserve(entry.target); // Stop observing after animation
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+scrollElements.forEach(el => scrollObserver.observe(el));

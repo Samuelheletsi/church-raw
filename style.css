@@ -86,7 +86,7 @@ h2 {
   text-align: center;
   overflow: hidden;
   color: #fff;
-  background: #000;
+  
 }
 
 .bg-video {
@@ -97,6 +97,7 @@ h2 {
   height: 100%;
   object-fit: cover;
   z-index: -2;
+  opacity: 0.6;
 }
 
 .bg-fallback {
