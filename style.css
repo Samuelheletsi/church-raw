@@ -11,6 +11,7 @@
   --button-text: #fff;
   --card-text: #333;
   --paragraph-text: #555;
+  --section-bg: #f9f9f9; /* Light mode section background */
 }
 
 body.dark {
@@ -23,6 +24,7 @@ body.dark {
   --button-text: #111827;
   --card-text: #ffd369;
   --paragraph-text: #d1d5db;
+  --section-bg: #1f2937; /* Dark mode section background */
 }
 
 /* ==============================
@@ -134,12 +136,7 @@ body.dark .bg-video {
 }
 
 @media (max-width: 768px) {
-  .bg-video {
-    display: none;  /* hide video on mobile */
-  }
-  .bg-fallback {
-    display: block; /* show fallback image on mobile */
-  }
+   
 
   .hero h1 {
     font-size: 2rem;
@@ -308,6 +305,7 @@ nav ul li a:hover {
 ============================== */
 .team-section {
   padding: 40px 20px;
+  background: var(--section-bg);
 }
 
 .team-container {
@@ -344,7 +342,7 @@ nav ul li a:hover {
 ============================== */
 .contact {
   padding: 50px 20px;
-  background: var(--card-bg);
+  background: var(--section-bg);
   color: var(--text-color);
   text-align: center;
 }
@@ -403,14 +401,14 @@ nav ul li a:hover {
 ============================== */
 .about {
   padding: 80px 20px;
-  background-color: var(--section-bg, #f9f9f9);
+  background-color: var(--section-bg);
   text-align: center;
 }
 
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: var(--primary-color, #333);
+  color: var(--primary-color);
 }
 
 .about-content {
@@ -426,7 +424,7 @@ nav ul li a:hover {
   text-align: left;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-color, #444);
+  color: var(--text-color);
 }
 
 .about-logo {
