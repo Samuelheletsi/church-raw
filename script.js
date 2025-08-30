@@ -109,7 +109,7 @@ function populateTeamSections(data){
       <h3>${p.name}</h3>
       <p>${p.description}</p>
     `;
-    card.onclick = () => window.location.href = `pastors.html?id=${encodeURIComponent(p.name)}`;
+    card.onclick = () => window.location.href = `pastor.html?id=${encodeURIComponent(p.name)}`;
     pastorContainer.appendChild(card);
   });
 
@@ -242,3 +242,19 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Animate elements on scroll
+const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+const scrollObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('active'); // Add class to trigger animation
+      observer.unobserve(entry.target); // Stop observing after animation
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+scrollElements.forEach(el => scrollObserver.observe(el));

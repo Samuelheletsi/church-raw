@@ -445,3 +445,15 @@ nav ul li a:hover {
     max-width: 150px;
   }
 }
+/* Elements start hidden */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Elements become visible when active */
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
